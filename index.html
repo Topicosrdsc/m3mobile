@@ -1,11 +1,48 @@
-    <link rel="canonical" href="https://codepen.io/Kamiya4047/pen/WNzeZov">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <body>
+    
+    <a href="">Github</a>
+<div class="container">
   
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <div>
+    Modo escuro
+    <label class="md3 switch">
+      <input type="checkbox" id="darkmode"  name="darkmode">
+      <span class="slider">
+        <span style="display: none;" class="material-symbols-rounded icon">done</span>
+      </span>
+    </label>
+  </div>
+
+  <label class="md3 switch">
+    <input type="checkbox">
+    <span class="slider">
+      <span style="display: none;" class="material-symbols-rounded icon">done</span>
+    </span>
+  </label>
+
+  <label class="md3 switch">
+    <input type="checkbox" disabled>
+    <span class="slider">
+      <span style="display: none;" class="material-symbols-rounded icon">done</span>
+    </span>
+  </label>
+
+  <label class="md3 switch">
+    <input type="checkbox" checked disabled>
+    <span class="slider">
+      <span style="display: none;" class="material-symbols-rounded icon">done</span>
+    </span>
+  </label>
+
+</div>
+  </body>
+  <head>
+    <title>Material Design 3</title>
 <style>
+  
   /* 
  * Material Design 3 Switch by Kamiya
  * Examples: https://codepen.io/Kamiya4047/pen/WNzeZov
@@ -208,27 +245,23 @@ body {
   'GRAD' 0,
   'opsz' 48
 }
+body{
+  font-family: sans-serif;
+  text-decoration: none;
+}
+a{
+  text-decoration: none;
+}
 </style>
-<div class="container">
-  <label class="md3 switch">
-    <input type="checkbox">
-    <span class="slider">
-      <span class="material-symbols-rounded icon">done</span>
-    </span>
-  </label>
-
-  <label class="md3 switch">
-    <input type="checkbox" disabled>
-    <span class="slider">
-      <span class="material-symbols-rounded icon">done</span>
-    </span>
-  </label>
-
-  <label class="md3 switch">
-    <input type="checkbox" checked disabled>
-    <span class="slider">
-      <span class="material-symbols-rounded icon">done</span>
-    </span>
-  </label>
-
-</div>
+<script>
+  document
+  .querySelector("#darkmode")
+  .onclick = function() {
+    if (this.checked)
+      document.body.classList.add("dark");
+    else
+      document.body.classList.remove("dark");
+  }
+</script>
+</head>
+</html>
